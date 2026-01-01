@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct khataApp: App {
+    
+    @StateObject var viewModel:HomeViewModel = HomeViewModel()
+    
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+       ContentView()
         }
     }
 }
