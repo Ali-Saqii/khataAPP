@@ -8,14 +8,14 @@
 import SwiftUI
 
 @main
-struct khataApp: App {
-    
-    @StateObject var viewModel:HomeViewModel = HomeViewModel()
-    
-    
+struct KhataApp: App {
+    @StateObject private var homeVM = HomeViewModel()
+
     var body: some Scene {
         WindowGroup {
-       ContentView()
+            HomwView()
+                .environmentObject(homeVM)
         }
     }
 }
+
