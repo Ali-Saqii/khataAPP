@@ -26,6 +26,7 @@ struct noBorrowerView: View {
                     
                     Button{
                         addborrower  = true
+                        SoundManager.shared.playSound(named: "sound3")
                     }
                     label: {
                         Text("Add Borrower 🥳")

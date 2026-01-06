@@ -30,7 +30,7 @@ struct HomwView: View {
                                 NavigationLink {
                                     borrowerDetailsView(borrowerId: borrower.id)
                                         .environmentObject(homeViewModel) // Inject VM here
-
+                                   
                                 } label: {
                                     borrowerRowView(
                                         initiliase: borrower.initialise,
@@ -43,6 +43,7 @@ struct HomwView: View {
                         }  .overlay(alignment: .bottomTrailing) {
                             Button {
                               addBorrower = true
+                                SoundManager.shared.playSound(named: "sound3")
                             } label: {
                                 Image(systemName: "plus")
                                     .foregroundStyle(.black)

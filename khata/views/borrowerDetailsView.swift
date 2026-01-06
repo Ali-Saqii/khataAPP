@@ -40,6 +40,7 @@ struct borrowerDetailsView: View {
                 HStack {
                     Button {
                         payment = true
+                        SoundManager.shared.playSound(named: "sound3")
                     } label: {
                         Text("Pay Price".capitalized)
                             .foregroundStyle(.black)
@@ -53,6 +54,7 @@ struct borrowerDetailsView: View {
                     Spacer()
                     Button {
                         transactionHistory = true
+                        SoundManager.shared.playSound(named: "sound3")
                     } label: {
                         Text("transation Hiatory".capitalized)
                             .foregroundStyle(.black)
@@ -113,6 +115,7 @@ struct borrowerDetailsView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         editBorrowerView = true
+                        SoundManager.shared.playSound(named: "sound3")
                     } label: {
                         HStack(spacing: 6) {
                             Image(systemName: "pencil")
@@ -142,6 +145,7 @@ struct borrowerDetailsView: View {
                         .onTapGesture {
                             homeViewModel.deleteBorrower(id: borrowerId)
                             dismiss()
+                            SoundManager.shared.playSound(named: "sound3")
                         }
                 }
                 

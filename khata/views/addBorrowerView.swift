@@ -46,6 +46,7 @@ struct addBorrowerView: View {
                     .padding(.vertical,25)
                 Button(action: {
                     saveBorrower()
+                    SoundManager.shared.playSound(named: "sound2")
                 },
                        
                        label: {
