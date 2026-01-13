@@ -128,14 +128,14 @@ struct borrowerDetailsView: View {
                                 )
                         }
                         .padding(.horizontal, 12)
-                        .padding(.vertical, 10)
+                        .padding(.vertical, 5)
                         .background(
                             Capsule()
                                 .fill(.white.opacity(0.6))
                         ) // or your custom background
                     }
                     
-                }.sharedBackgroundVisibility(.hidden)
+                }/*.sharedBackgroundVisibility(.hidden)*/
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "trash.fill")
                     
