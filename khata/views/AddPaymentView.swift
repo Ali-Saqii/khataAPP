@@ -18,7 +18,10 @@ struct AddPaymentView: View {
     @State private var alertMessage = ""
 
     var body: some View {
-     
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [.purple.opacity(0.3),.blue.opacity(0.3)]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                .ignoresSafeArea(edges: .all)
+            
             VStack(spacing: 20) {
                 Text("Add Payment")
                     .font(.largeTitle)
@@ -64,6 +67,7 @@ struct AddPaymentView: View {
             .alert(isPresented: $showAlert) {
                 Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
+        }
     }
     
     private func savePayment() {
